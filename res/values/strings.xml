@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">1022TEAMPROJECTDESIGN</string>
+    <string name="Title">Guess the Number!</string>
+    <string name="Enter_name">Enter your Name</string>
+    <string name="start">Start Guessing!</string>
+    <string name="Between">Between 0 to </string>
+    <string name="check">Check your guess!</string>
+    <string name="counter">Counter: </string>
+    <string name="next">Next</string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="Again">Play Again?</string>
+    <string name="Y">YES</string>
+    <string name="N">NO</string>
+</resources>
