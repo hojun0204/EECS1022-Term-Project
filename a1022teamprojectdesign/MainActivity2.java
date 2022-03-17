@@ -2,12 +2,13 @@ package com.example.a1022teamprojectdesign;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
-import android.widget.EditText;
 import java.util.Random;
 
 public class MainActivity2 extends AppCompatActivity {
@@ -16,22 +17,27 @@ public class MainActivity2 extends AppCompatActivity {
     String textView3 = "";
     TextView x3;
     Button checkbutton;
+    int counter = 0;
     public void rng(){
         Random rand = new Random();
         n = rand.nextInt(100)+1;
     }
-    public void guess(View view) {
+    public void guess(View view){
         updatecounter();
         EditText guess = (EditText) findViewById(R.id.editTextTextPersonName2);
         int guessint = Integer.parseInt(guess.getText().toString());
-        if (n < guessint) {
-            textView3 = "Higher!";
-        } else if (n > guessint) {
+
+        if (n < guessint){
             textView3 = "Lower!";
-        } else if (n == guessint) {
+        }
+        else if (n > guessint){
+            textView3 = "Higher!";
+        }
+        else if (n == guessint){
             textView3 = "Correct!";
         }
-        Toast.makeText(this, textView3, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, textView3, Toast.LENGTH_SHORT ).show();
+
     }
     private void updatecounter(){
         counter ++;
@@ -43,6 +49,9 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         rng();
         button = (Button) findViewById(R.id.nextbutton);
+        x3 = (TextView) findViewById(R.id.x3);
+        checkbutton = (Button) findViewById(R.id.checkbutton);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
