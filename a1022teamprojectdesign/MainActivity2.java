@@ -12,6 +12,7 @@ import java.util.Random;
 
 public class MainActivity2 extends AppCompatActivity {
     int n;
+    private Button button;
     String textView3 = "";
     TextView x3;
     Button checkbutton;
@@ -41,5 +42,17 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         rng();
+        button = (Button) findViewById(R.id.nextbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity3();
+            }
+        });
+    }
+
+    public void openActivity3() {
+        Intent intent = new Intent(this, MainActivity3.class);
+        startActivity(intent);
     }
 }
