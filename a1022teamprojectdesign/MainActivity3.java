@@ -23,8 +23,8 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
     }
-        public void openActivity4() {
-            Intent intent = new Intent(this, MainActivity4.class);
-            startActivity(intent);
-        }
+    public void openActivity4() {
+        Intent intent = new Intent(this, MainActivity4.class);
+        startActivity(intent);
     }
+}
